@@ -692,7 +692,7 @@ html {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (hover: none) and (pointer: coarse) {
   .arrow {
     display: none !important;
   }
