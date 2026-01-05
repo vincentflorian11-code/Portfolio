@@ -629,19 +629,23 @@ html {
   position: fixed;
   bottom: 20px;
   right: 20px;
+
   width: 56px;
   height: 56px;
   border-radius: 50%;
   background: #ffcc00;
   border: none;
+
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 5px;
+
   cursor: pointer;
-  z-index: 1001;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
+  z-index: 99999; /* 🔥 AU-DESSUS DE TOUT */
+  isolation: isolate; /* évite les conflits */
 }
 
 .mobile-menu-btn span {
@@ -686,4 +690,26 @@ html {
   .mobile-menu-btn {
     display: flex;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .arrow {
+    display: none !important;
+  }
+}
+
+/* Chrome, Safari, Edge */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* IE / Edge legacy */
+body {
+  -ms-overflow-style: none;
 }
