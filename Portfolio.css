@@ -620,7 +620,7 @@ html {
 
 .hero-name1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 400;
 }
 
@@ -714,5 +714,6 @@ body {
   -ms-overflow-style: none;
 
 }
+
 
 
