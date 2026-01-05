@@ -1,0 +1,613 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Global */
+body {
+  background-color: #111;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Bande tout en haut */
+.top-bar {
+  position: sticky;
+  top: 0;
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.top-bar p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Ajouter un padding-top au hero pour que le texte ne soit pas caché */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #111;
+  color: #fff;
+  padding-top: 40px; /* hauteur approximative de la top-bar */
+}
+
+/* Slider en arrière-plan */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.slide.active {
+  opacity: 0.3; /* léger fondu pour garder le texte lisible */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Flèches */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  width: 50px;          /* largeur fixe pour cercle */
+  height: 50px;         /* hauteur fixe pour cercle */
+  display: flex;        /* flex pour centrer la flèche */
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;   /* bord parfaitement arrondi */
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;           /* retirer padding qui déforme */
+}
+
+.arrow.left { left: 20px; }
+.arrow.right { right: 20px; }
+
+.arrow:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+/* Texte au-dessus */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #151515;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+  border-bottom: 1px solid #2a2a2a;
+  z-index: 10;
+}
+
+.navbar a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #fff;
+}
+
+/* Sections */
+.section {
+  padding: 80px 10%;
+}
+
+.section-dark {
+  background-color: #181818;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Skills */
+.skills {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.skills li {
+  background-color: #222;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #2f2f2f;
+}
+
+/* Projects */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.project-card h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #aaa;
+}
+
+/* Contact */
+#contact p {
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+/* Footer */
+footer {
+  background-color: #0d0d0d;
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .section {
+    padding: 60px 6%;
+  }
+}
+
+/* Portfolio visuel derrière le nom */
+#portfolio-visual {
+  padding: 100px 10px 50px; /* espace sous le hero */
+  position: relative;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.portfolio-item {
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.section-dark {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Flip Card */
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* effet d'agrandissement */
+}
+
+.flip-card:hover {
+  transform: scale(1.05); /* agrandissement léger */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.4,0.2,0.2,1);
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.flip-card-front {
+  background-color: #222;
+  color: white;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  background-color: #333;
+  color: #fff;
+  transform: rotateY(180deg);
+  padding: 15px;
+}
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.top-bar p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.main-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: #7fbfff;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .main-nav.active {
+    display: flex;
+  }
+}
+
+/* Sections */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Bouton menu fixe en bas à droite */
+.menu-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 30px;
+  background: #111;
+  border: none;
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Menu déroulant qui s’ouvre vers le haut et à gauche */
+.dropdown-menu {
+  position: fixed;
+  bottom: 70px; /* juste au-dessus du bouton */
+  right: 20px;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 0;
+  width: 200px;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0;
+  z-index: 99;
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 15px;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #333;
+}
+
+/* Menu actif */
+.dropdown-menu.active {
+  max-height: 500px; /* assez pour tous les liens */
+  padding: 10px 0;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Listes */
+.section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.section ul li {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.section a {
+  color: #7fbfff;
+  text-decoration: none;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}
+
+.education-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.edu-block {
+  background-color: #333;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  position: relative;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.edu-block:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Agrandissement actif au clic */
+.edu-block.active {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  z-index: 1; /* pour passer au-dessus des autres */
+}
+
+/* Fenêtre projets cachée par défaut */
+.edu-projects {
+  max-height: 0;         /* contenu masqué */
+  overflow: hidden;      /* cacher le débordement */
+  transition: max-height 0.3s ease; /* animation */
+  background-color: #444;
+  margin-top: 15px;
+  padding: 0 15px;       /* on ne met pas padding vertical au départ */
+  border-radius: 8px;
+  text-align: left;
+}
+
+.edu-block.active .edu-projects {
+  padding: 15px;
+}
+
+.edu-projects h4 {
+  margin-top: 0;
+}
+
+.edu-projects ul {
+  margin: 10px 0 0 20px;
+}
+
+.edu-projects ul li {
+  margin-bottom: 5px;
+}
+
+.flip-card-front img {
+  width: 90%;
+  height: 180px;          /* hauteur identique pour toutes les images */
+  object-fit: cover;      /* remplit sans déformer */
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.videos-section {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.videos-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.videos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.video-card {
+  background: #222;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.video-card h3 {
+  margin-bottom: 8px;
+}
+
+.video-card p {
+  color: #bbb;
+  font-size: 0.95rem;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #000;
+}
+
+.video-wrapper video {
+  width: 100%;
+  object-fit: cover;      /* remplit sans déformer */
+  display: block;
+}
