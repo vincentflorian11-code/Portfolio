@@ -360,7 +360,7 @@ footer {
 
 .main-nav {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .main-nav a {
@@ -714,4 +714,5 @@ body {
   -ms-overflow-style: none;
 
 }
+
 
