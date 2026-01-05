@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Florian Vincent</title>
+  <link rel="stylesheet" href="Portfolio.css">
+</head>
+<body>
+
+    <!-- Bande tout en haut -->
+    <div class="top-bar">
+  <p>Portfolio – Projet Personnel | Janvier 2026</p>
+  <nav class="main-nav">
+  <a href="#about">A Propos</a>
+  <a href="#skills">Compétences</a>
+  <a href="#projects">Mes Projets</a>
+  <a href="#education">Parcours Académique</a>
+  <a href="#contact">Contact</a>
+</nav>
+</div>
+
+  <!-- HERO avec slider en arrière-plan -->
+  <header class="hero">
+    <!-- Slider background -->
+    <div class="hero-bg">
+      <div class="slide active"><img src="Figma.png" alt="Projet 1"></div>
+      <div class="slide"><img src="Axe.png" alt="Projet 2"></div>
+      <div class="slide"><img src="Container.png" alt="Projet 3"></div>
+      <div class="slide"><img src="Choixy.png" alt="Projet 4"></div>
+      <div class="slide"><img src="IA.png" alt="Projet 5"></div>
+
+      <!-- Flèches -->
+      <button class="arrow left">&#10094;</button>
+      <button class="arrow right">&#10095;</button>
+    </div>
+
+    <!-- Texte au-dessus -->
+    <div class="hero-content">
+      <h1>Florian Vincent</h1>
+      <p>Étudiant en informatique • Développeur junior</p>
+    </div>
+  </header>
+
+  <!-- Sections du site (à propos, compétences, projets…) -->
+  <section id="about" class="section">
+    <h2>À propos</h2>
+    <p>Passionné par le numérique et la création visuelle, je développe des projets qui allient design, fonctionnalité et expérience utilisateur. J’aime transformer des idées en interfaces claires, modernes et efficaces, en portant une attention particulière aux détails.
+
+Curieux et en constante évolution, je m’intéresse aussi bien au design UI/UX qu’au développement web, ce qui me permet d’avoir une vision globale d’un projet, de la conception à la réalisation. Chaque nouveau projet est pour moi une opportunité d’apprendre, d’expérimenter et de repousser mes limites.
+
+Motivé, rigoureux et impliqué, je cherche toujours à proposer des solutions adaptées, esthétiques et performantes, tout en restant à l’écoute des besoins et des objectifs.</p>
+  </section>
+
+  <section id="skills" class="section section-dark">
+    <h2>Compétences</h2>
+    <ul class="skills">
+      <li>HTML / CSS</li>
+      <li>C++</li>
+      <li>Git & GitHub</li>
+      <li>Python</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section section-dark">
+  <h2>Mes Projets</h2>
+  <div class="cards-container">
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="Figma.png" alt="Projet 1">
+          <h3>Création d'un jeux vidéo</h3>
+          <h3>Statut : <span style="color: #ffcc00;">En cours</span></h3>
+        </div>
+        <div class="flip-card-back">
+          <h3>Description :</h3>
+          <p>Jeux vidéo basé sur la programmation en lua sur la plateforme Roblox, ce jeux est un rpg ayant des mécanique uniques basé sur la nuit.</p>
+          <span style="margin-bottom: 10px;"></span>
+          <h4>Logiciels : Roblox Studio, Figma et Blender</h4>
+          <span style="margin-bottom: 10px;"></span>
+          <h3>Nombre d'heures : 210h</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="Choixy.png" alt="Projet 2">
+          <h3>Choixy site d'affiliation</h3>
+          <h3>Statut : <span style="color: #ffcc00;">En cours</span></h3>
+        </div>
+        <div class="flip-card-back">
+          <h3>Description :</h3>
+          <p></p>
+          <p>Site d'affiliation pour un client, avec des fonctionnalités de tracking et de conversion.</p>
+          <span style="margin-bottom: 10px;"></span>
+          <h4>Logiciels : VS Codes et GitHub</h4>
+          <span style="margin-bottom: 10px;"></span>
+          <h3>Nombre d'heures : 30h</h3>
+        </div>
+        </div>
+      </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="IA.png" alt="Projet 3">
+          <h3>IA Création Automatique</h3>
+          <h3>Statut : <span style="color: #ffcc00;">En cours</span></h3>
+        </div>
+        <div class="flip-card-back">
+          <h3>Description :</h3>
+          <p>IA pouvant créer des vidéos automatiquement à partir d'une base et poster les vidéos automatiquement sur ma chaine Youtube et TikTok.</p>
+          <span style="margin-bottom: 10px;"></span>
+          <h4>Logiciels : VS Codes et Python 3.11.9</h4>
+          <span style="margin-bottom: 10px;"></span>
+          <h3>Nombre d'heures : 40h</h3>
+        </div>
+        </div>
+      </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="Site_IA.png" alt="Projet 4">
+          <h3>Site internet avec mon IA</h3>
+          <h3>Statut : <span style="color: #ff0000;">Pas commencé</span></h3>
+        </div>
+        <div class="flip-card-back">
+          <h3>Description :</h3>
+          <p>Site internet permettant de présenter mon IA, ses fonctionnalités et proposer ses services contre un abonnement.</p>
+          <span style="margin-bottom: 10px;"></span>
+          <h4>Logiciels : VS Codes, Python 3.11.9 et GitHub</h4>
+          <span style="margin-bottom: 10px;"></span>
+          <h3>Nombre d'heures : 0h</h3>
+        </div>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<section class="videos-section">
+  <h2>Vidéos</h2>
+
+  <div class="videos-container">
+    <div class="video-card">
+      <video controls>
+        <source src="videos/Portail.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+      <h3>Portail Donjon</h3>
+      <p>Création d'un portail sur le logiciel Roblox Studio.</p>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="videos/Inventaire.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+      <h3>Inventaire</h3>
+      <p>Création d'un système d'inventaire avec toutes les fonctions qui vont avec.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Parcours Académique -->
+<section id="education" class="section">
+  <h2>Parcours Académique</h2>
+
+  <div class="education-container">
+
+  <!-- Bloc 1 -->
+  <div id="edu1" class="edu-block">
+    <h3>2021-2024</h3>
+    <p>Baccalauréat STI2D (SIN) Mention assez bien – Lycée polyvalent Marie-Madeleine Fourcade</p>
+    <div class="edu-projects">
+      <h4>Projets réalisés :</h4>
+      <ul>
+        <li>Projet 1 : Serre automatisée</li>
+        <li>Projet 2 : Codex</li>
+        <li>Projet 3 : Architecture normalisation</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bloc 2 -->
+  <div id="edu2" class="edu-block">
+    <h3>2024-2025</h3>
+    <p>Informatique - Cesi école d'ingénieurs</p>
+    <div class="edu-projects">
+      <h4>Projets réalisés :</h4>
+      <ul>
+        <li>Projet 1 : STRONGBOX 3000</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bloc 3 -->
+  <div id="edu3" class="edu-block">
+    <h3>2025-2026</h3>
+    <p>Informatique – IUT AIX-Marseille</p>
+    <div class="edu-projects">
+      <h4>Projets réalisés :</h4>
+      <ul>
+        <li>Projet 1 : Site internet moderne</li>
+        <li>Projet 2 : Création d'une VM</li>
+        <li>Projet 3 : Codage de 3 systèmes de votes en C++</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section section-dark">
+  <h2>Contact</h2>
+  <p>Vous pouvez me contacter via les moyens suivants :</p>
+  <ul>
+    <li>Email : vincent.florian11@gmail.com</li>
+    <li>Téléphone : 06 98 32 50 01</li>
+    <li>LinkedIn : <a href="https://www.linkedin.com/in/florian-vincent-152aa433b/" target="_blank">Mon Profil</a></li>
+    <li>GitHub : <a href="https://github.com/vincentflorian11-code" target="_blank">Mon GitHub</a></li>
+  </ul>
+</section>
+
+  <footer>
+    <p>© 2026 • Florian Vincent</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+const slides = document.querySelectorAll('.slide');
+const next = document.querySelector('.arrow.right');
+const prev = document.querySelector('.arrow.left');
+let current = 0;
+let autoSlideInterval = 10000; // 10 secondes
+let timer = null;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if(i === index) slide.classList.add('active');
+  });
+  current = index; // mise à jour de l'index actuel
+}
+
+// Fonction pour avancer automatiquement
+function startAutoSlide() {
+  timer = setInterval(() => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }, autoSlideInterval);
+}
+
+// Réinitialiser le timer si l'utilisateur clique
+function resetAutoSlide() {
+  clearInterval(timer);
+  startAutoSlide();
+}
+
+// Événements flèches
+next.addEventListener('click', () => {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+  resetAutoSlide(); // redémarre le timer
+});
+
+prev.addEventListener('click', () => {
+  current = (current - 1 + slides.length) % slides.length;
+  showSlide(current);
+  resetAutoSlide(); // redémarre le timer
+});
+
+// Démarrer le carrousel automatique
+startAutoSlide();
+</script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const flipCards = document.querySelectorAll('.flip-card');
+    flipCards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped'); // ajoute/enlève la classe flipped
+      });
+    });
+  });
+  </script>
+<script>
+document.querySelectorAll('.edu-block').forEach(block => {
+  block.addEventListener('click', () => {
+    const projects = block.querySelector('.edu-projects');
+    const isActive = block.classList.contains('active');
+
+    // Fermer tous les autres blocs
+    document.querySelectorAll('.edu-block').forEach(b => {
+      if (b !== block) {
+        b.classList.remove('active');
+        const proj = b.querySelector('.edu-projects');
+        if (proj) proj.style.maxHeight = '0';
+      }
+    });
+
+    // Dérouler ou replier le bloc cliqué
+    if (!isActive) {
+      block.classList.add('active');
+      if (projects) projects.style.maxHeight = projects.scrollHeight + 'px';
+    } else {
+      block.classList.remove('active');
+      if (projects) projects.style.maxHeight = '0';
+    }
+  });
+});
+</script>
+</body>
+</html>
