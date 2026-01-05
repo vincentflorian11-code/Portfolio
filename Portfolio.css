@@ -717,12 +717,13 @@ body {
 
 @media screen and (max-width: 768px) {
   .main-nav {
-    gap: 12px;                 /* moins d’espace entre les liens */
+    gap: 8px;                 /* moins d’espace entre les liens */
     padding: 8px 10px;         /* barre plus fine */
   }
 
   .main-nav a {
-    font-size: 12px;           /* texte plus petit */
+    font-size: 8px;           /* texte plus petit */
     padding: 4px 6px;          /* moins de hauteur */
   }
 }
+
