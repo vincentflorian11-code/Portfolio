@@ -354,9 +354,22 @@ document.querySelectorAll('.edu-block').forEach(block => {
     });
   });
 </script>
+  <script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function () {
+    const target = this.getAttribute('href');
+
+    // Scroll normal
+    setTimeout(() => {
+      history.replaceState(null, null, ' ');
+    }, 10);
+  });
+});
+</script>
 </body>
 
 </html>
+
 
 
 
